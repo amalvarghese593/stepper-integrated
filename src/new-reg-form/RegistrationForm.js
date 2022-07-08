@@ -199,10 +199,18 @@ export const RegistrationForm = () => {
         // orientation="vertical"
       >
         <StepperLatest>
-          <Wizard.Step>
+          <Wizard.Step
+            optional={[
+              "middleName",
+              "secondaryContactNumber",
+              "secondaryEmailId",
+              "fatherMiddleName",
+              "motherMiddleName",
+            ]}
+          >
             <Personal />
           </Wizard.Step>
-          <Wizard.Step>
+          <Wizard.Step /* optional={[]} */>
             <Education />
           </Wizard.Step>
           <Wizard.Step>

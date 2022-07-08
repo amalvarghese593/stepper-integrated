@@ -18,8 +18,8 @@ export const Personal = React.memo(() => {
     setFieldTouched,
     values: { currentLocation, preferredLocation },
   } = formik;
-  console.log("gender: ", formik.values.gender);
-  console.log("error: ", formik.errors);
+  // console.log("gender: ", formik.values.gender);
+  // console.log("error: ", formik.errors);
   return (
     <div>
       <label htmlFor="nameFields" className="mb-3">

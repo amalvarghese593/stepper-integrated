@@ -14,9 +14,11 @@ export const StepperLatest = ({ children }) => {
   } = useWizard();
 
   const stepHandler = (index) => {
+    // console.log(validation[index - 1]);
     if (!index) return setStep(index + 1);
     for (let i = 1; i < index + 1; i++) {
       for (const key in validation[i - 1].fields) {
+        console.log(validation[i - 1].fields[key]);
         if (!values[key]) return;
       }
     }
@@ -33,7 +35,7 @@ export const StepperLatest = ({ children }) => {
           return (
             <div key={el} className="stepper-container">
               <div
-                onClick={() => stepHandler(index)}
+                // onClick={() => stepHandler(index)}
                 className="step-btn-value-container"
               >
                 <div className="step-icon-container">

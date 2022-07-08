@@ -50,6 +50,8 @@ function Wizard({
     validateOnMount: true,
     onSubmit: nextButtonHandler,
   });
+  // console.log("errors ", formik.errors);
+  // console.log("values ", formik.values);
   const prevButtonHandler = useCallback(() => {
     setStep((prev) => prev - 1);
     formik.setErrors({});
